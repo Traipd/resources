@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮电部协议采集配置</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/zjcss.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/zjdiv.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/wq.js"></script>
+</head>
+<body>
+<form action="/wq/saveYouDianFile" method="post">
+
+    <div id="top_div">
+        <div class="topm">
+            <table border="0px">
+                <tr>
+                    <td style="background-image: url(../static/images/dqpz.png)"><input type="button" value="打开配置文件"/></td>
+                    <td style="background-image: url(../static/images/drpz.png)"><input type="button" value="新建配置文件"/></td>
+                    <td style="background-image: url(../static/images/bjsb.png)"><input type="submit" value="保存配置文件"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <table border="0px">
+            <tr>
+                <td>协议版本：</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--数据采集、DO、AO-->
+    <div>
+        <div style="background-color: #DDD"class="topm">
+            <table  border="0px">
+                <tr >
+                    <td style="background-image: url()"><input type="button" id="common" value="数据采集命令配置"></td>
+                    <td style="background-image: url()"><input type="button"  id="DO" value=" DO控制量配置"></td>
+                    <td style="background-image: url()"><input type="button"  id="AO" value="AO控制量配置"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+<div>
+    <!--数据采集命令配置-->
+    <div id="showCommon">
+        <!--增加命令、删除命令、编辑命令-->
+        <div class="topm">
+            <table border="0px">
+                <tr>
+                    <td style="background-image: url(../static/images/zjsb.png)"><input type="button" id="addCommon"  value="增加命令"/></td>
+                    <td style="background-image: url(../static/images/scsb.png)"><input type="button" id="removeCommon" value="删除命令"/></td>
+                    <td style="background-image: url(../static/images/bjsb.png)"><input type="button" id="modifyCommon" value="编辑命令"/></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="alltable"  table="commontable">
+                <tr>
+                    <td>选择</td>
+                    <td>命令码</td>
+                    <td>数据内容</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chooseCommon"></td>
+                    <td><input name="cmdCode" type="text"></td>
+                    <td><input name="data" type="text"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="center_div">
+            <!--增加通道、删除通道、编辑通道-->
+            <div class="topm">
+                <table border="0px">
+                    <tr>
+                        <td style="background-image: url(../static/images/zjsb.png)"><input type="button" id="addRoadI" value="增加通道"></td>
+                        <td style="background-image: url(../static/images/scsb.png)"><input type="button"  id="removeRoadI" value=" 删除通道"></td>
+                        <td style="background-image: url(../static/images/bjsb.png)"><input type="button"  id="modifyRoadI" value="编辑通道"></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <!--AI通道、DI通道-->
+                <div>
+                    <div style="background-color: #DDD" class="topm">
+                        <table border="0px">
+                            <tr>
+                                <td style="background-image: url()"><input type="button" id="AI" value="AI通道"></td>
+                                <td style="background-image: url()"><input type="button" id="DI" value="DI通道"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--AI通道-->
+                <div id="showAI">
+                    <table  class="alltable"   id="AItable">
+                        <tr>
+                            <td>AI选择</td>
+                            <td>SPID</td>
+                            <td>通道名称</td>
+                            <td>通道号</td>
+                            <td>偏移量</td>
+                            <td>偏移量表达式</td>
+                            <td>从尾部开始计算</td>
+                            <td>数据长度</td>
+                            <td>数据类型</td>
+                            <td>反序</td>
+                            <td>比例系数</td>
+                            <td>零点值</td>
+                            <td>初始值</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="chooseAI"></td>
+                            <td><input name="ai_spid" type="text"></td>
+                            <td><input name="ai_channelName" type="text"></td>
+                            <td><input name="ai_channelNo" type="text"></td>
+                            <td><input name="ai_posi" type="text"></td>
+                            <td><input name="ai_posiEx" type="text"></td>
+                            <td><input name="ai_fromTail" type="text"></td>
+                            <td><input name="ai_len" type="text"></td>
+                            <td><input name="ai_dataType" type="text"></td>
+                            <td><input name="ai_reverseOrder" type="text"></td>
+                            <td><input name="ai_ratio" type="text"></td>
+                            <td><input name="ai_zeroValue" type="text"></td>
+                            <td><input name="ai_initValue" type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--DI通道-->
+                <div  id="showDI">
+                    <table  class="alltable"  id="DItable">
+                        <tr>
+                            <td>DI选择</td>
+                            <td>SPID</td>
+                            <td>通道名称</td>
+                            <td>通道号</td>
+                            <td>偏移量</td>
+                            <td>偏移量表达式</td>
+                            <td>从尾部开始计算</td>
+                            <td>数据长度</td>
+                            <td>数据类型</td>
+                            <td>反序</td>
+                            <td>逻辑有效值 </td>
+                        </tr>
+                        <tr>
+                            <td><input name="" type="checkbox" name="chooseDI"></td>
+                            <td><input name="di_spid" type="text"></td>
+                            <td><input name="di_channelName" type="text"></td>
+                            <td><input name="di_channelNo" type="text"></td>
+                            <td><input name="di_posi" type="text"></td>
+                            <td><input name="di_posiEx" type="text"></td>
+                            <td><input name="di_fromTail" type="text"></td>
+                            <td><input name="di_len" type="text"></td>
+                            <td><input name="di_dataType" type="text"></td>
+                            <td><input name="di_reverseOrder" type="text"></td>
+                            <td><input name="di_logicValue" type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--增加通道、删除通道、编辑通道-->
+    <div class="topm" id="showOMenu">
+        <table border="0px">
+            <tr>
+                <td style="background-image: url(../static/images/zjsb.png)"><input type="button" id="addRoadO" value="增加通道"></td>
+                <td style="background-image: url(../static/images/scsb.png)"><input type="button"  id="removeRoadO" value=" 删除通道"></td>
+                <td  style="background-image: url(../static/images/bjsb.png)"><input type="button"  id="modifyRoadO" value="编辑通道"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--DO控制量配置-->
+    <div id="showDO">
+        <table  class="alltable"  id="DOtable">
+            <tr>
+                <td>DO选择</td>
+                <td>SPID</td>
+                <td>通道名称</td>
+                <td>通道号</td>
+                <td>命令码</td>
+                <td>命令数据内容</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chooseDO"></td>
+                <td><input name="do_spid" type="text"></td>
+                <td><input name="do_channelName" type="text"></td>
+                <td><input name="do_channelNo" type="text"></td>
+                <td><input name="do_cmdCode" type="text"></td>
+                <td><input name="do_data" type="text"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--AO控制量配置-->
+    <div id="showAO">
+        <table  class="alltable"  id="AOtable">
+            <tr>
+                <td>AO选择</td>
+                <td>SPID</td>
+                <td>通道名称</td>
+                <td>通道号</td>
+                <td>命令码</td>
+                <td>命令数据内容</td>
+                <td>偏移量</td>
+                <td>数据长度</td>
+                <td>数据类型</td>
+                <td>反序</td>
+                <td>比例系数</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chooseAO"></td>
+                <td><input name="ao_spid" type="text"></td>
+                <td><input name="ao_channelName" type="text"></td>
+                <td><input name="ao_channelNo" type="text"></td>
+                <td><input name="ao_cmdCode" type="text"></td>
+                <td><input name="ao_data" type="text"></td>
+                <td><input name="ao_posi" type="text"></td>
+                <td><input name="ao_len" type="text"></td>
+                <td><input name="ao_dataType" type="text"></td>
+                <td><input name="ao_reverseOrder" type="text"></td>
+                <td><input name="ao_ratio" type="text"></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</form>
+</body>
+</html>
