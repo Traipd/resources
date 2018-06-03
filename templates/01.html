@@ -4,17 +4,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../static/css/div2.css" rel="stylesheet" type="text/css" />
 <link href="../static/css/css2.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../static/js/js.js"></script>
+    <script type="text/javascript" src="../static/js/zj.js"></script>
 </head>
 
 <body>
 
 <div id="page01-form">
 	<form name="form01" method="" action="">
-    	厂商标识名：<input name="login_name" type="text" tabindex="4" size="30" /><br /><br />
-        设备型号：　<input name="login_name" type="text" tabindex="4" size="30"/><br /><br />
-        硬件版本号：<input name="login_name" type="text" tabindex="4" size="30"/><br /><br />
-        软件版本号：<input name="login_name" type="text" tabindex="4" size="30"/><br /><br />
-        <input type="button" value="修改" /><input type="button" value="保存" />
+    	厂商标识名：<input name="login_name" type="text" tabindex="4" size="30" class="I" disabled="disabled"/><br /><br />
+        设备型号：　<input name="login_name" type="text" tabindex="4" size="30" class="I" disabled="disabled"/><br /><br />
+        硬件版本号：<input name="login_name" type="text" tabindex="4" size="30" class="I" disabled="disabled"/><br /><br />
+        软件版本号：<input name="login_name" type="text" tabindex="4" size="30" class="I" disabled="disabled"/><br /><br />
+        <input type="button" value="修改" onclick="makeDisabledByClass('page01-form','I')"/><input type="button" value="保存" />
   </form>
 </div>
 

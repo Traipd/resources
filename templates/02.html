@@ -4,17 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../static/css/div2.css" rel="stylesheet" type="text/css" />
 <link href="../static/css/css2.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../static/js/zj.js"></script>
 </head>
 
 <body>
 
 <div id="page02-form">
 	<form name="form01" method="" action="">
-    	监控中心(SC)IP：　　<input name="login_name" type="text" tabindex="4" size="30" /><br /><br />
-        监控中心(SC)端口：　<input name="login_name" type="text" tabindex="4" size="30"/><br /><br />
-        FTP登录名：　　　　 <input name="login_name" type="text" tabindex="4" size="30"/><br /><br />
-        FTP密码：　　　　　 <input name="login_name" type="text" tabindex="4" size="30"/><br /><br />
-        <input type="button" value="修改" /><input type="button" value="保存" />
+    	监控中心(SC)IP：　　<input name="login_name" type="text" tabindex="4" class="I" size="30" disabled="disabled"/><br /><br />
+        监控中心(SC)端口：　<input name="login_name" type="text" tabindex="4" class="I" size="30" disabled="disabled"/><br /><br />
+        FTP登录名：　　　　 <input name="login_name" type="text" tabindex="4" class="I" size="30" disabled="disabled"/><br /><br />
+        FTP密码：　　　　　 <input name="login_name" type="text" tabindex="4" class="I" size="30" disabled="disabled"/><br /><br />
+        <input type="button" value="修改"  onclick="makeDisabledByClass('page02-form','I')"/><input type="button" value="保存" />
   </form>
 </div>
 
