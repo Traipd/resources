@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <script src="js/addAnddelet.js"></script>
+    <!--
+    在页面最后加载
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    -->
+</head>
+<body class="mybody">
+
+<div class="container-fluid">
+
+    <!--设备-->
+    <div id="top-menu2" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav ">
+            <li><button class="btn btn-info"  onclick="zjaddRows('sb_tb')"><img src="images/zjsb.png" class="img-rounded">增加设备</button></li>
+            <li><button class="btn btn-info"  onclick="changeCheckedlineDisable('sb_tb','sb_check','checkcontrol')"><img src="images/bjsb.png" class="img-rounded">编辑设备</button></li>
+            <li><button class="btn btn-info"  onclick="onDelete('sb_check','sb_tb')"><img src="images/scsb.png" class="img-rounded">删除设备</button></li>
+            <li><button class="btn btn-info"><img src="images/drpz.png" class="img-rounded">导入配置</button></li>
+            <li><button class="btn btn-info"><img src="images/dcpz.png" class="img-rounded">导出配置</button></li>
+        </ul>
+    </div>
+
+    <div class=" row table-responsive mytable">
+
+        <table id="sb_tb" class="table table-bordered table-hover table-condensed ">
+            <tr class="info">
+                <td></td>
+                <td>设备ID</td>
+                <td>设备名称</td>
+                <td>设备端口号</td>
+                <td>子端口号</td>
+                <td>动态库文件名</td>
+                <td>设备地址</td>
+                <td>波特率</td>
+                <td>数据位</td>
+                <td>停止位</td>
+                <td>较验位</td>
+            </tr>
+            <tr class="warning">
+                <td><input type="checkbox" name="sb_check"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--通道-->
+    <div id="top-menu2" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav ">
+            <li><button class="btn btn-info"  onclick="zjaddRows('td_tb')"><img src="images/zjsb.png" class="img-rounded">增加通道</button></li>
+            <li><button class="btn btn-info"  onclick="changeCheckedlineDisable('td_tb','td_check','checkcontrol')"><img src="images/bjsb.png" class="img-rounded">编辑通道</button></li>
+            <li><button class="btn btn-info"  onclick="onDelete('td_check','td_tb')"><img src="images/scsb.png" class="img-rounded">删除通道</button></li>
+        </ul>
+    </div>
+
+    <div class=" row table-responsive mytable">
+
+        <table id="td_tb" class="table table-bordered table-hover table-condensed ">
+            <tr class="info">
+                <td></td>
+                <td>SPID</td>
+                <td>通道名称</td>
+                <td>通道号</td>
+            </tr>
+            <tr class="warning">
+                <td><input type="checkbox" name="td_check"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+                <td><input class="checkcontrol" disabled="disabled"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--告警-->
+    <div class=" row table-responsive mytable2">
+
+        <table class="table table-bordered table-hover table-condensed ">
+            <caption style="text-align: center;font-size: 17px">关联告警阀值信号量</caption>
+            <tr class="info">
+                <td></td>
+                <td>SPID</td>
+                <td>通道名称</td>
+                <td>配置方案ID</td>
+                <td>阈值</td>
+                <td>开始延时</td>
+                <td>结束延时</td>
+            </tr>
+            <tr class="warning">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

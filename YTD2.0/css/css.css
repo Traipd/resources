@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+.box{
+	/*height: 1100px;*/
+	/*border:2px solid #4cae4c;*/
+	background-color:RGB(153,217,234);
+}
+
+/*#top{*/
+	/*background-color:RGB(153,217,234);*/
+/*}*/
+
+/*#center{*/
+	/*background-color: #ffffff;*/
+/*}*/
+
+#title img{
+	float: left;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+
+#top-menu{
+	border-bottom: 2px solid #ffffff;
+	padding-bottom: 5px;
+}
+
+#top-menu li{
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#left-menu{
+	padding-top: 20px;
+	border-right: 2px solid #ffffff;
+	height: 1000px;
+}
+
+#left-menu li img{
+	margin-bottom:3px;
+	padding-right:5px;
+}
+
+#left-menu .align{
+	text-align: center;
+	background-color: #5bc0de;
+}
+
+
+#center-right{
+	height: 1000px;
+	padding-left: 0px;
+	/*border: solid 1px #000000;*/
+}
+
+#center-right-iframe{
+	width: 1106px;
+	height: 1000px;
+}
+
+
+/*下面是子页面的样式*/
+
+.mybody{
+	background-color:RGB(153,217,234);
+}
+
+#top-menu2{
+	margin-top: 10px;
+	margin-left: -20px;
+}
+
+#top-menu2 li{
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#top-menu3 {
+	margin-top: 5px;
+}
+
+#top-menu3 li{
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.mytable{
+	height: 280px;
+	margin-top: 1px;
+	margin-left: -2px;
+	border: 1px solid #ffffff;
+}
+
+.mytable td{
+	min-width: 120px;
+	text-align: center;
+}
+
+.mytable2{
+	height: 300px;
+	margin-top: 1px;
+	margin-left: -2px;
+	border: 1px solid #ffffff;
+}
+
+.mytable2 td{
+	min-width: 120px;
+	text-align: center;
+}
+
+.top-menu2{
+	margin-top: 10px;
+	margin-left: -20px;
+}
+
+.top-menu2 li{
+	margin-left: 2px;
+	margin-right: 2px;
+}
